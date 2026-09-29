@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="heading">
+
+    <span>
+        PLANNER 01
+    </span>
+
+    <h1>
+        Home Interior Planner
+    </h1>
+
+</div>
+
+
+<form
+    id="homeForm"
+    class="card planner"
+>
+
+    <label>
+
+        Budget ₹
+
+        <input
+            name="budget"
+            type="number"
+            min="1"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Rooms
+
+        <input
+            name="rooms"
+            value="Living Room,Bedroom"
+        >
+
+    </label>
+
+
+    <label>
+
+        Style
+
+        <input
+            name="style"
+            value="modern"
+        >
+
+    </label>
+
+
+    <label>
+
+        Items
+
+        <input
+            name="items"
+            value="sofa=1,ceiling fan=2,dining table=1"
+        >
+
+    </label>
+
+
+    <label>
+
+        Priorities
+
+        <input
+            name="priorities"
+            value="functionality, style, value"
+        >
+
+    </label>
+
+
+    <button class="btn">
+        Generate Plan
+    </button>
+
+
+    <p id="msg"></p>
+
+</form>
+
+
+<div id="results"></div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    homePlanner()
+</script>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="heading">
+
+    <span>
+        PLANNER 02
+    </span>
+
+    <h1>
+        Party Budget Planner
+    </h1>
+
+</div>
+
+
+<form
+    id="partyForm"
+    class="card planner"
+>
+
+    <label>
+
+        Budget ₹
+
+        <input
+            name="budget"
+            type="number"
+            min="1"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Guests
+
+        <input
+            name="guests"
+            type="number"
+            min="1"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Event type
+
+        <input
+            name="event_type"
+            value="Birthday"
+        >
+
+    </label>
+
+
+    <label>
+
+        Venue
+
+        <input
+            name="venue"
+            value="flexible"
+        >
+
+    </label>
+
+
+    <label>
+
+        City
+
+        <input
+            name="city"
+            placeholder="City"
+        >
+
+    </label>
+
+
+    <label>
+
+        Preferences
+
+        <textarea
+            name="preferences"
+        ></textarea>
+
+    </label>
+
+
+    <button class="btn">
+        Generate Plan
+    </button>
+
+
+    <p id="msg"></p>
+
+</form>
+
+
+<div id="results"></div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    partyPlanner()
+</script>
+
+{% endblock %}

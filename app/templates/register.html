@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form
+    id="registerForm"
+    class="form card"
+>
+
+    <h1>
+        Create Account
+    </h1>
+
+    <input
+        name="full_name"
+        placeholder="Full name"
+        required
+    >
+
+    <input
+        name="email"
+        type="email"
+        placeholder="Email"
+        required
+    >
+
+    <input
+        name="password"
+        type="password"
+        minlength="8"
+        placeholder="Password (8+ characters)"
+        required
+    >
+
+    <button class="btn">
+        Register
+    </button>
+
+    <p id="msg"></p>
+
+    <p>
+        Already registered?
+
+        <a href="/login">
+            Login
+        </a>
+    </p>
+
+</form>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    registerForm()
+</script>
+
+{% endblock %}

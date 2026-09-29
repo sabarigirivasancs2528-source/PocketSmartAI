@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form
+    id="loginForm"
+    class="form card"
+>
+
+    <h1>
+        Login
+    </h1>
+
+    <input
+        name="email"
+        type="email"
+        placeholder="Email"
+        required
+    >
+
+    <input
+        name="password"
+        type="password"
+        placeholder="Password"
+        required
+    >
+
+    <button class="btn">
+        Login
+    </button>
+
+    <p id="msg"></p>
+
+    <p>
+        New user?
+        <a href="/register">
+            Create account
+        </a>
+    </p>
+
+</form>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    loginForm()
+</script>
+
+{% endblock %}
